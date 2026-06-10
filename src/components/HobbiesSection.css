@@ -1,0 +1,407 @@
+/* ── Hobbies Section ── */
+
+.hobbies-section {
+  padding-bottom: 4rem;
+}
+
+/* ── Hobbies Grid ── */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.hobby-card {
+  text-align: center;
+  padding: 2rem 1.25rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hobby-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(245, 158, 11, 0.15), 0 0 20px rgba(245, 158, 11, 0.08);
+}
+
+.hobby-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.hobby-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.hobby-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ── MUN Divider ── */
+.mun-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 4rem 0;
+}
+
+.mun-divider-line:first-child {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--hobbies-accent)
+  );
+  opacity: 0.5;
+}
+
+.mun-divider-line:last-child {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    transparent
+  );
+  opacity: 0.5;
+}
+
+.mun-divider-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.25rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 99px;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.mun-divider-badge:hover {
+  transform: scale(1.05);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.mun-divider-icon {
+  display: inline-block;
+  animation: munGlobeSpin 12s linear infinite;
+}
+
+@keyframes munGlobeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── MUN Section ── */
+.mun-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mun-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mun-section-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.15);
+}
+
+.mun-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--hobbies-accent);
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Quote ── */
+.mun-quote {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--white);
+  border-left: 3px solid var(--mun-blue);
+  background: rgba(59, 130, 246, 0.05);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ── Debate Skills ── */
+.mun-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.mun-skill-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.mun-skill-badge:hover {
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ── Perspectives ── */
+.mun-perspectives {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.mun-perspective-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.mun-perspective-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-blue);
+}
+
+.mun-perspective-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--mun-blue);
+  margin-bottom: 0.5rem;
+}
+
+.mun-perspective-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Awards Section ── */
+.mun-awards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mun-col-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mun-col-icon {
+  font-size: 1.2rem;
+}
+
+.mun-awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mun-award-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.mun-award-item:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  transform: translateX(4px);
+}
+
+.mun-award-item.exec:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.mun-award-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--hobbies-accent);
+  margin-top: 6px;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+
+.exec-dot {
+  background: var(--mun-blue);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+.mun-award-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mun-award-conference {
+  font-size: 0.8rem;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.mun-award-committee {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.mun-award-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+/* Award type colors */
+.mun-award-badge.special-mention {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.mun-award-badge.high-commendation {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.mun-award-badge.honorable-mention {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--purpleL);
+}
+
+.exec-badge {
+  background: rgba(59, 130, 246, 0.15) !important;
+  color: #60a5fa !important;
+}
+
+/* ── Focus Areas ── */
+.mun-focus {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.mun-focus-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mun-focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.mun-focus-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--hobbies-accent);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+/* ── Profile Summary ── */
+.mun-profile-summary {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.mun-profile-summary p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1023px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mun-perspectives {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mun-perspectives {
+    grid-template-columns: 1fr;
+  }
+
+  .mun-awards-section {
+    grid-template-columns: 1fr;
+  }
+}

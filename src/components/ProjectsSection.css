@@ -1,0 +1,168 @@
+/* ── Projects Section ── */
+
+.projects-section {
+  padding-bottom: 4rem;
+}
+
+/* ── Grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Card ── */
+.project-card {
+  position: relative;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(236, 72, 153, 0.12),
+    transparent 70%
+  );
+  pointer-events: none;
+  border-radius: 16px 0 0 0;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.15), 0 0 20px rgba(236, 72, 153, 0.1);
+}
+
+/* ── Card Header ── */
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.project-badge {
+  background: rgba(236, 72, 153, 0.15);
+  color: var(--projects-accent);
+  border-color: rgba(236, 72, 153, 0.25);
+}
+
+.project-emoji {
+  font-size: 1.5rem;
+}
+
+/* ── Name ── */
+.project-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.project-trophy {
+  margin-left: 0.25rem;
+}
+
+/* ── Description ── */
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ── Tech Tags ── */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.project-tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(236, 72, 153, 0.08);
+  color: rgba(236, 72, 153, 0.8);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+}
+
+/* ── Bullets ── */
+.project-bullets {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.project-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.project-bullets li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--projects-accent);
+  font-size: 0.75rem;
+}
+
+/* ── Footer ── */
+.project-footer {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 0.75rem;
+}
+
+.project-featured {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--projects-accent);
+}
+
+/* ── GitHub Link ── */
+.projects-github {
+  text-align: center;
+}
+
+.github-link {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--projects-accent);
+  border: 2px solid var(--projects-accent);
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.github-link:hover {
+  background: rgba(236, 72, 153, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1023px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

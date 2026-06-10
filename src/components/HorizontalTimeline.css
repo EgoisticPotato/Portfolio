@@ -1,0 +1,22 @@
+/* ── Journey Line SVG (full page overlay) ── */
+
+.journey-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.journey-line {
+  transition: stroke-dashoffset 0.12s ease-out;
+}
+
+/* Mobile — hide */
+@media (max-width: 768px) {
+  .journey-svg {
+    display: none;
+  }
+}

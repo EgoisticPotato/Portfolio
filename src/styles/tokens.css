@@ -1,0 +1,53 @@
+/* ========================================
+   DESIGN SYSTEM TOKENS — Mehul Dinesh Portfolio
+   ======================================== */
+
+:root {
+  /* ── Base Palette ── */
+  --bg:        #07071a;
+  --bg2:       #0f0f2a;
+  --purple:    #7c3aed;
+  --purpleL:   #a78bfa;
+  --purpleXL:  #c4b5fd;
+  --white:     #f0f0f8;
+  --muted:     #7a7a9a;
+
+  /* ── Section Accent Colors ── */
+  --hero-accent:     #7c3aed;
+  --career-accent:   #10b981;
+  --projects-accent: #ec4899;
+  --hobbies-accent:  #f59e0b;
+  --mun-blue:        #3b82f6;
+
+  /* ── Glass ── */
+  --glass-bg:     rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur:   blur(12px);
+
+  /* ── Navbar Glass ── */
+  --nav-bg:      rgba(7, 7, 26, 0.85);
+  --nav-blur:    blur(16px);
+  --nav-border:  rgba(255, 255, 255, 0.08);
+  --nav-height:  80px;
+
+  /* ── Typography ── */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* ── Sizing ── */
+  --max-width: 1200px;
+
+  /* ── Transitions ── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 200ms var(--ease-out);
+  --transition-normal: 400ms var(--ease-out);
+  --transition-slow: 600ms var(--ease-out);
+
+  /* ── Shadows ── */
+  --glow-purple:  0 0 20px rgba(124, 58, 237, 0.3);
+  --glow-green:   0 0 20px rgba(16, 185, 129, 0.3);
+  --glow-pink:    0 0 20px rgba(236, 72, 153, 0.3);
+  --glow-amber:   0 0 20px rgba(245, 158, 11, 0.3);
+  --glow-blue:    0 0 20px rgba(59, 130, 246, 0.3);
+}

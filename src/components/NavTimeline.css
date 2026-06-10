@@ -1,0 +1,23 @@
+/* ── Nav Timeline (fixed navbar) ── */
+
+.nav-timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 102;
+  pointer-events: none;
+}
+
+.nav-timeline .node-dot,
+.nav-timeline text {
+  pointer-events: auto;
+}
+
+/* Mobile simplification */
+@media (max-width: 768px) {
+  .nav-timeline text {
+    font-size: 22px !important;
+  }
+}

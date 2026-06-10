@@ -1,0 +1,172 @@
+/* ── Resume Expand ── */
+
+.resume-expand {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+/* ── Header ── */
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.resume-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.resume-header-icon {
+  font-size: 1.2rem;
+}
+
+.resume-header-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
+  flex: 1;
+}
+
+.resume-header-arrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--career-accent);
+  transition: transform var(--transition-fast);
+}
+
+/* ── Content ── */
+.resume-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s var(--ease-out), opacity 0.4s var(--ease-out);
+  opacity: 0;
+}
+
+.resume-content.open {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.resume-inner {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.5rem;
+}
+
+/* ── Blocks ── */
+.resume-block {
+  margin-bottom: 1.5rem;
+}
+
+.resume-block-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--career-accent);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resume-text {
+  font-size: 0.85rem;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.resume-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.resume-bullets {
+  list-style: none;
+  margin-top: 0.35rem;
+}
+
+.resume-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.resume-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--career-accent);
+}
+
+.resume-project {
+  margin-bottom: 0.75rem;
+}
+
+/* ── Skills tags ── */
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.resume-skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--purpleL);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* ── Actions ── */
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.resume-download {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--career-accent);
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--career-accent);
+  border-radius: 8px;
+  transition: background var(--transition-fast);
+  text-decoration: none;
+}
+
+.resume-download:hover {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.resume-close {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  transition: color var(--transition-fast);
+}
+
+.resume-close:hover {
+  color: var(--white);
+}
